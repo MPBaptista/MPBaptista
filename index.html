@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Miguel Baptista · Backend Engineer</title>
+  <meta name="description" content="Miguel Baptista is a backend engineer. Contact details, about and projects.">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <nav aria-label="Sections">
+        <ul class="nav-links">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#contact">Contacts</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <header class="hero">
+        <span class="eyebrow">Backend Engineer</span>
+        <h1><span class="gradient-text">Miguel Baptista</span></h1>
+      </header>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <h2 id="about-title" class="section-title">About Me</h2>
+        <div class="prose">
+          <p>Backend Engineer at tb.lx by Daimler Trucks & Buses, creating, fixing and maintaining backend services and infrastructure for EV management products.</p>
+          <p>Outside work I self-host, building my own infrastructure around my data and needs. I also tinker with watches, electronics, cars, motorcycles and home DIY. A tinkerer at heart, learning by doing.</p>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title">Contacts</h2>
+        <ul class="contact-list">
+          <li><a href="https://github.com/MPBaptista" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/miguel-p-baptista/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:miguelbaptista.mpb@gmail.com">Email</a></li>
+        </ul>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section-title">Projects</h2>
+
+        <div class="projects">
+          <a class="project" href="https://mpbaptista.github.io/cabin-fit/" target="_blank" rel="noopener">
+            <img class="project-image" src="images/cabin-fit-preview.png" alt="Screenshot of the Cabin Fit bag size form" width="480" height="367" loading="lazy">
+            <div class="project-body">
+              <h3>Cabin Fit</h3>
+              <p>A simple website that tells you whether your bag fits within airline cabin restrictions, so you can pack with confidence before you get to the airport.</p>
+            </div>
+          </a>
+
+          <article class="project">
+            <div class="project-body">
+              <h3>Home Server</h3>
+              <p>[REPLACE_ME]</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="container">Last updated at <time id="last-updated"></time></p>
+  </footer>
+
+  <script>
+    (function () {
+      var el = document.getElementById("last-updated");
+      if (!el) return;
+      // document.lastModified is the file's modification time as served by the host.
+      var d = new Date(document.lastModified);
+      el.textContent = isNaN(d)
+        ? document.lastModified
+        : d.toLocaleString(undefined, { month: "long", year: "numeric" });
+    })();
+  </script>
+</body>
+</html>
