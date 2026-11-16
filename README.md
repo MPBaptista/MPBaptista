@@ -20,7 +20,7 @@ No build step or dependencies are needed. Open `index.html` in a browser.
 
 - Text, contact links and project cards live in `index.html`.
 - Colours are defined as tokens at the top of `styles.css`.
-- The footer's "Last updated" date comes from the file's modification time as served by the host, so it updates on deploy.
+- The footer's "Last updated" date is typed in by hand in `index.html`.
 
 ## License
 
