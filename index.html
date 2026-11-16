@@ -74,19 +74,7 @@
   </main>
 
   <footer class="site-footer">
-    <p class="container">Last updated at <time id="last-updated"></time></p>
+    <p class="container">Last updated November 2026.</p>
   </footer>
-
-  <script>
-    (function () {
-      var el = document.getElementById("last-updated");
-      if (!el) return;
-      // document.lastModified is the file's modification time as served by the host.
-      var d = new Date(document.lastModified);
-      el.textContent = isNaN(d)
-        ? document.lastModified
-        : d.toLocaleString(undefined, { month: "long", year: "numeric" });
-    })();
-  </script>
 </body>
 </html>
